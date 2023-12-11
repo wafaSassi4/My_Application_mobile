@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/im9"
+    android:padding="20dp"
+    tools:context=".view.inscription">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@drawable/container_shape"
+        android:fontFamily="@font/artifika"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="inscrire"
+        android:textSize="40dp"
+        android:padding="25dp"
+        android:layout_alignParentTop= "true"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Enter username"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_below="@+id/title"
+        />
+    <EditText
+        android:id="@+id/mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="exemple@gmail.com"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_below="@+id/user"
+        />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mail"
+        android:layout_marginTop="50dp"
+        android:hint="Enter password"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+    <EditText
+        android:id="@+id/verifpsw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_marginTop="50dp"
+        android:hint="Repeat password"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+    <Button
+        android:id="@+id/inscrire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inscrire"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:padding="20dp"
+        android:background="@drawable/button_shape"
+        android:layout_below="@+id/verifpsw"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentRight="true"/>
+
+    <Button
+        android:id="@+id/account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verifpsw"
+        android:layout_marginTop="43dp"
+        android:background="#00F6D0E0"
+        android:text="Already have account !"
+        android:textSize="20sp"
+        android:textAllCaps="false"/>
+
+
+</RelativeLayout>

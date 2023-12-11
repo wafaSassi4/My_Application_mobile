@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".view.Resultat"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/bg">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/artifika"
+        android:padding="25dp"
+        android:gravity="center"
+        android:text="@string/titre2"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/container_shape"
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:layout_width="266dp"
+        android:layout_height="332dp"
+        android:layout_gravity="center"
+        android:src="@drawable/doctor1"
+        android:layout_marginTop="50dp"/>
+    <TextView
+        android:id="@+id/res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Consultation"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_shape"
+            android:padding="15dp"
+            android:text="Go Back"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_marginTop="20dp"
+
+            android:background="@drawable/button_shape"
+            android:padding="10dp"
+            android:text="sauvgarder"
+
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </GridLayout>
+
+</LinearLayout>

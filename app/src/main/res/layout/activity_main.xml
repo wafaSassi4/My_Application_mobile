@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/im9"
+    tools:context=".view.MainActivity">
+
+<!--    <ImageView-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:src="@drawable/arrow_back"-->
+<!--        />-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/artifika"
+        android:padding="25dp"
+        android:gravity="center"
+        android:text="@string/titre"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/container_shape"
+        android:layout_marginTop="10dp"
+         />
+    <TextView
+        android:id="@+id/tvage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/age"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="28dp"
+        android:textColor="@color/black"
+/>
+
+    <SeekBar
+        android:id="@+id/sbage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:max="120"/>
+
+    <!--<View
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/pink"></View>-->
+    <TextView
+        android:id="@+id/tvjeuner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/jeuner"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        />
+
+    <RadioGroup
+        android:id="@+id/rgGrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:id="@+id/rboui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Oui"
+            android:textSize="30sp"
+            android:layout_marginHorizontal="35dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rbnon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Non"
+            android:textSize="30sp"
+            android:layout_marginLeft="35dp"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mesure"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/black"
+        ></TextView>
+    <EditText
+        android:id="@+id/etmesure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:hint="mesure de glycemie(mmol)"
+        android:inputType="numberDecimal"
+        android:textSize="25sp"
+        ></EditText>
+    <Button
+        android:id="@+id/bconsulter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="consulter"
+        android:textSize="25dp"
+        android:layout_marginTop="55dp"
+        android:textColor="@color/black"
+        android:padding="20dp"
+        android:background="@drawable/button_shape"/>
+</LinearLayout>

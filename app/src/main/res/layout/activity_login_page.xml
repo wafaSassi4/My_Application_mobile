@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/im9"
+    tools:context=".view.MainActivity">
+
+    <TextView
+        android:id="@+id/entete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/artifika"
+        android:padding="25dp"
+        android:gravity="center"
+        android:text="@string/login"
+        android:layout_alignParentTop="true"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/container_shape"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Entrer votre login"
+        android:textSize="20sp"
+        android:layout_below="@id/entete"
+        android:layout_marginTop="190dp"
+        />
+    <EditText
+        android:id="@+id/psw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Entrer votre mot de passe"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:layout_below="@id/login"
+        android:layout_marginTop="50dp"
+        />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/psw"
+        android:layout_marginTop="65dp">
+
+        <Button
+            android:id="@+id/compte"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:padding="15dp"
+            android:text="You don't have account ?"
+            android:textAllCaps="false"
+            android:background="#00000000"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="143dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_shape"
+            android:text="Connexion"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    </GridLayout>
+
+
+
+</RelativeLayout>

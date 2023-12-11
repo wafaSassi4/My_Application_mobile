@@ -1,0 +1,8 @@
+<resources>
+    <string name="titre">Mesure le niveau de glycémie</string>
+    <string name="login">login</string>
+    <string name="age">Votre age:</string>
+    <string name="jeuner">Est ce que vous etes jeunez:</string>
+    <string name="mesure">Mesure de glycemie en mmol:</string>
+    <string name="titre2">Consultation</string>
+</resources>
