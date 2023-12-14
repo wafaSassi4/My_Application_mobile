@@ -12,9 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplication.R;
+import com.example.myapplication.controoler.LoginController;
 
 public class inscription extends AppCompatActivity {
-    SharedPreferences sharedPreferences;
 
     private TextView account=null;
     private EditText user=null;
@@ -22,14 +22,13 @@ public class inscription extends AppCompatActivity {
     private EditText password=null;
     private EditText verifpsw=null;
     private Button inscrire=null;
+    LoginController loginController;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inscription);
-
-        sharedPreferences = getSharedPreferences("signup",MODE_PRIVATE);
 
         init();
         account.setOnClickListener(new View.OnClickListener() {
@@ -55,7 +54,7 @@ public class inscription extends AppCompatActivity {
                     Toast.makeText(inscription.this, "insert your username", Toast.LENGTH_SHORT).show();
                 }
 
-                if (!mail.getText().toString().isEmpty()) {
+                if (!mail.getText().toString().isEmpty() && mail.getText().toString().contains("@") && mail.getText().toString().contains(".") && !mail.getText().toString().contains(" ")) {
                     adrmail = true;
                 } else {
                     Toast.makeText(inscription.this, "insert your email address", Toast.LENGTH_LONG).show();
@@ -71,7 +70,7 @@ public class inscription extends AppCompatActivity {
                     Toast.makeText(inscription.this, "you must enter the same password", Toast.LENGTH_LONG).show();
                 }
                 if(username && adrmail &&psw &&verifpswd){
-                    saveData(user.getText().toString(),pwd);
+                    loginController.CreateUser(user.getText().toString(),password.getText().toString(),inscription.this);
                     inscrire();
                     Toast.makeText(inscription.this, "created succesffuly", Toast.LENGTH_SHORT).show();
                 }
@@ -89,6 +88,7 @@ public class inscription extends AppCompatActivity {
         mail=findViewById(R.id.mail);
         verifpsw=findViewById(R.id.verifpsw);
         inscrire=findViewById(R.id.inscrire);
+        loginController=LoginController.getInstance(this);
     }
     public void account(){
         Intent intent=new Intent(inscription.this, login_page.class);
@@ -97,11 +97,5 @@ public class inscription extends AppCompatActivity {
     public void inscrire(){
         Intent intent=new Intent(inscription.this, MainActivity.class);
         startActivity(intent);
-    }
-    private void saveData(String login,String pwd){
-        SharedPreferences.Editor editor= sharedPreferences.edit();
-        editor.putString("login",login);
-        editor.putString("password",pwd);
-        editor.apply();
     }
 }

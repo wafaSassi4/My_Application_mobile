@@ -12,22 +12,29 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplication.R;
+import com.example.myapplication.controoler.LoginController;
 
 public class login_page extends AppCompatActivity {
-    SharedPreferences sharedPreferences;
     private EditText login = null;
     private EditText psw = null;
     private Button compte = null;
     private Button btn2 = null;
+    LoginController loginController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
 
-        sharedPreferences = getSharedPreferences("signup",MODE_PRIVATE);
-
         init();
+
+        String user = loginController.getUsername();
+        String pswd = loginController.getPassword();
+
+        login.setText(user);
+        psw.setText(pswd);
+
+
         compte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,8 +47,6 @@ public class login_page extends AppCompatActivity {
             public void onClick(View view) {
               boolean  loginStr = false;
               boolean passeStr=false;
-              String user=sharedPreferences.getString("login","");
-              String pswd=sharedPreferences.getString("password","");
 
                 if (!login.getText().toString().isEmpty()&&user.equals(login.getText().toString())){
                     loginStr=true;
@@ -66,6 +71,7 @@ public class login_page extends AppCompatActivity {
         psw=findViewById(R.id.psw);
         compte=findViewById(R.id.compte);
         btn2=findViewById(R.id.btn2);
+        loginController=LoginController.getInstance(this);
     }
     public void inscrire(){
         Intent intent=new Intent(login_page.this, inscription.class);
