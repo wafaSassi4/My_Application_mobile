@@ -28,8 +28,23 @@
         android:layout_marginTop="50dp"
         android:textSize="30sp"
         android:padding="10dp"/>
-
-
-
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@color/whitesale">
+    </TableLayout>
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go Back"
+        android:textSize="18sp"
+        android:padding="15dp"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/white"
+        android:layout_marginTop="200dp"
+        />
 
 </LinearLayout>

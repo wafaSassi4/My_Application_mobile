@@ -42,6 +42,11 @@ public class Resultat extends AppCompatActivity {
                 finish();
             }
         });
+        sauvgarder();
+    }
+    public void sauvgarder(){
+        Intent intent =new Intent(Resultat.this,HistoryActivity.class);
+        startActivity(intent);
     }
 
 }
